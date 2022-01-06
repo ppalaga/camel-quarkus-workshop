@@ -13,7 +13,7 @@ The workshop is structured into different sections :
 * [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes)
 * [Part 5 - Camel Quarkus Extensions](#part-5---camel-quarkus-extensions)
 * [Part 6 - Camel Quarkus Enterprise Integration Patterns](#part-6---camel-quarkus-enterprise-integration-patterns)
-* [Part 7 - Camel Quarkus and Kafka](#part-7---camel-quarkus-and-kafka)
+* [Part 7 - Integration example with Camel Quarkus](#part-7---integration-example-with-camel-quarkus)
 * [Bonus A - Camel Quarkus and Kamelets](#bonus-a---camel-quarkus-and-the-kamelets)
 * [Bonus B - Deploying Camel Quarkus apps into the Cloud](#bonus-b---deploying-to-the-cloud)
 
@@ -21,8 +21,6 @@ The workshop is structured into different sections :
 **🚀NOTE**
 
 * If you happen to be already familiar with Quarkus, you could jump from [Prerequisites for the workshop](#prerequisites-for-the-workshop) to [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes) and deep dive directly into Apache Camel! 
-* [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes), [Part 5 - Camel Quarkus Extensions](#part-5---camel-quarkus-extensions) and  [Part 6 - Camel Quarkus Enterprise Integration Patterns](#part-6---camel-quarkus-enterprise-integration-patterns) cover important 
-* [Bonus A](#bonus-a---camel-quarkus-and-the-kamelets) and [Bonus B](#bonus-b---deploying-to-the-cloud) sections are both revisited version of [Part 7 - Camel Quarkus and Kafka](#part-7---camel-quarkus-and-kafka).
 
 ---
 
@@ -802,33 +800,58 @@ When you have time, we invite you to take a look at:
 Estimate time : 25 minutes
 @TODO: 25 MINUTES LEFT at this level
 
+### About this section
 In this part, we will discover how easy and fast it is to :
-* stream data from and to Kafka
-* read / write from a database
-* Use APIs
-* Serialize data
+* Stream data from and to Kafka
+* Read / write to a database
+* Use external APIs
+* Serialize Data
+* Create a REST endpoint
+
 
 We will also experience the joy of using [dev services](https://quarkus.io/guides/dev-services) in the development mode. No need to install any kafka server or database.
 
 ---
 **🚀NOTE**
 
-This section requires having Docker installed in order to have a kafka and postgresql servers. 
-In case, you don't have proper license:
+This section requires having Docker installed in order to provition a Kafka and Postgresql servers. 
+
+In case, you don't have a proper Docker license:
 * Use H2 Databse instead of Postgresql
-* Ask us during the session to provide you a kafka instance in the cloud. Note that we won't have too many to provide
+* Ask us during the session to provide you a kafka instance in the Cloud.
 
 ---
 
+### Introducing the example
 
+This example will illustrate a application that will receive some Beer orders, and that needs to do actions about those orders :
+* insert the orders within a Database
+* notify the delivery company using a specific API (This one will be provided during the session)
 
+The application is designed around Event Driven Architecture and uses Kafka to handle those messages:
+* The beer orders to be processed are in a kafka topic named `orders`
+* The notifications to the delivery company are in a kafka topic named `deliveries`
+
+The application that create orders and notify delevry teams are external to our ecosystem.
+
+![Drag Racing](images/CQ-workshop1.png)
 
 
 ## Bonus A - Camel Quarkus and the Kamelets
-@TODO
+---
+**🚀NOTE**
+
+This section is a revisited version of the [Part 7 - Integration Example with Camel Quarkus](#part-7---integration-example-with-camel-quarkus). We recommend you start with the Part 7 section, in order to have a better understanding of this one.
+
+---
 
 ## Bonus B - Deploying to the cloud
-@TODO
+---
+**🚀NOTE**
+
+This section is a revisited version of the [Part 7 - Integration Example with Camel Quarkus](#part-7---integration-example-with-camel-quarkus). We recommend you start with the Part 7 section, in order to have a better understanding of this one.
+
+---
 
 ## TODO: more sections needed ? camel-bean ? some cdi tricks ?
 + Use mvnw instead of maven (we don't have mvnw to generate that first project at this stage)
@@ -839,3 +862,4 @@ In case, you don't have proper license:
 + Complete pre-requisites with as most docker images pre-download as possible
 
 ## Satisfation form ? Reward/Goodies ?
+@TODO

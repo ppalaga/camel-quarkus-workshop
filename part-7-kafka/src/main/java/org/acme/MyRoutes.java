@@ -6,6 +6,5 @@ public class MyRoutes extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("")
     }
 }
