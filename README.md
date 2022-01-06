@@ -20,7 +20,9 @@ The workshop is structured into different sections :
 ---
 **🚀NOTE**
 
-If you happen to be already familiar with Quarkus, you could jump from [Prerequisites for the workshop](#prerequisites-for-the-workshop) to [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes) and deep dive directly into Apache Camel! 
+* If you happen to be already familiar with Quarkus, you could jump from [Prerequisites for the workshop](#prerequisites-for-the-workshop) to [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes) and deep dive directly into Apache Camel! 
+* [Part 4 - Camel Quarkus Routes](#part-4---camel-quarkus-routes), [Part 5 - Camel Quarkus Extensions](#part-5---camel-quarkus-extensions) and  [Part 6 - Camel Quarkus Enterprise Integration Patterns](#part-6---camel-quarkus-enterprise-integration-patterns) cover important 
+* [Bonus A](#bonus-a---camel-quarkus-and-the-kamelets) and [Bonus B](#bonus-b---deploying-to-the-cloud) sections are both revisited version of [Part 7 - Camel Quarkus and Kafka](#part-7---camel-quarkus-and-kafka).
 
 ---
 
@@ -796,9 +798,31 @@ When you have time, we invite you to take a look at:
  + [The dynamic router EIP](https://camel.apache.org/components/latest/eips/dynamicRouter-eip.html)
  + [The kamelet EIP](https://camel.apache.org/components/latest/eips/kamelet-eip.html)
 
-## Part 7 - Camel Quarkus and Kafka
+## Part 7 - Integration Example with Camel Quarkus
 Estimate time : 25 minutes
 @TODO: 25 MINUTES LEFT at this level
+
+In this part, we will discover how easy and fast it is to :
+* stream data from and to Kafka
+* read / write from a database
+* Use APIs
+* Serialize data
+
+We will also experience the joy of using [dev services](https://quarkus.io/guides/dev-services) in the development mode. No need to install any kafka server or database.
+
+---
+**🚀NOTE**
+
+This section requires having Docker installed in order to have a kafka and postgresql servers. 
+In case, you don't have proper license:
+* Use H2 Databse instead of Postgresql
+* Ask us during the session to provide you a kafka instance in the cloud. Note that we won't have too many to provide
+
+---
+
+
+
+
 
 ## Bonus A - Camel Quarkus and the Kamelets
 @TODO
