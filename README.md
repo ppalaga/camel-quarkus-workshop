@@ -798,7 +798,6 @@ When you have time, we invite you to take a look at:
 
 ## Part 7 - Integration Example with Camel Quarkus
 Estimate time : 25 minutes
-@TODO: 25 MINUTES LEFT at this level
 
 ### About this section
 In this part, we will discover how easy and fast it is to :
@@ -834,7 +833,7 @@ The application is designed around Event Driven Architecture and uses Kafka to h
 
 The application that create orders and notify delevry teams are external to our ecosystem.
 
-![Drag Racing](images/CQ-workshop1.png)
+![](images/CQ-workshop1.png)
 
 
 ## Bonus A - Camel Quarkus and the Kamelets
